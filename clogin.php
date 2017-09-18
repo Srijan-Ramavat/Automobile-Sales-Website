@@ -13,7 +13,7 @@ if(isset($_POST['submit']))
 	
 	if($username&&$password)
 	{
-		$query = mysql_query("SELECT * FROM users WHERE username='$username'");
+		$query = mysql_query("SELECT * FROM customer WHERE username='$username'");
 		$numrow = mysql_num_rows($query);
 		
 		if($numrow!=0)
