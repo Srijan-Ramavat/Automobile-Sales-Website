@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if($_SESSION['login_user'])
+{
+	$username=$_SESSION['login_user'];
+}
+
+?>
+
 <!--
 Author: W3layouts
 Author URL: http://w3layouts.com
@@ -55,9 +66,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="header-right animated wow fadeInRight" data-wow-delay=".5s">
 				<div class="header-right1 ">
 					<ul>
-
-						<li><i class="glyphicon glyphicon-log-in" ></i><a href="login.html">Login</a></li>
-						<li><i class="glyphicon glyphicon-book" ></i><a href="register.html">Register</a></li>
+                        <li><a href="#"><?php echo $username; ?></a></li>
+						<li><i class="glyphicon glyphicon-log-out" ></i><a href="logout.php">Logout</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
@@ -97,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<li><a href="products.html">Rolls Royce </a></li>
 												<li><a href="products.html">BMW </a></li>
 												<li><a href="products.html">Jaguar </a></li>
-                        <li><a href="products.html">Mercedes-Benz </a></li>
+                                               <li><a href="products.html">Mercedes-Benz </a></li>
 												<li><a href="products.html">Audi </a></li>
 
 											</ul>
