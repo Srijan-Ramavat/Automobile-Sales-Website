@@ -202,19 +202,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- contact -->
 	<div class="login">
 		<div class="container">
-		<form>
+		<form method="post" action="register.php">
 			<div class="col-md-6 login-do1 animated wow fadeInLeft" data-wow-delay=".5s">
 				<div class="login-mail">
-					<input type="text" placeholder="Email" required="">
+					<input type="text" placeholder="Username" name="username" required="">
 					<i class="glyphicon glyphicon-envelope"></i>
 				</div>
 				<div class="login-mail">
-					<input type="password" placeholder="Password" required="">
+					<input type="text" placeholder="Email" name="email" required="">
+					<i class="glyphicon glyphicon-envelope"></i>
+				</div>
+				<div class="login-mail">
+					<input type="password" placeholder="Password" name="password" required="">
 					<i class="glyphicon glyphicon-lock"></i>
 				</div>
 				<div class="login-mail">
-					<input type="password" placeholder="Repeated password" required="">
-					<i class="glyphicon glyphicon-lock"></i>
+					<input type="text" pattern="[7-9]{1}[0-9]{9}" placeholder="Contact no." name="phone" required="">
+					<i class="glyphicon glyphicon-earphone"></i>
 				</div>
 				  <a class="news-letter" href="#">
 						 <label class="checkbox1"><input type="checkbox" name="checkbox" ><i> </i>I agree with the terms</label>

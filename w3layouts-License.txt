@@ -1,3 +1,7 @@
 reference links
 
 https://www.codeofaninja.com/2013/04/shopping-cart-in-php.html
+
+
+
+<?php if(isset($_GET['error'])){echo $_GET['error'];echo "<br>";} ?>

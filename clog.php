@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php if(isset($_GET['error'])){echo $_GET['error'];echo "<br>";} ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -96,7 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<li><a href="products.html">Rolls Royce </a></li>
 												<li><a href="products.html">BMW </a></li>
 												<li><a href="products.html">Jaguar </a></li>
-                                                <li><a href="products.html">Mercedes-Benz </a></li>
+                        <li><a href="products.html">Mercedes-Benz </a></li>
 												<li><a href="products.html">Audi </a></li>
 
 											</ul>
@@ -195,23 +196,41 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--banner-->
 <div class="banner-top">
 	<div class="container">
-		<h2 class="animated wow fadeInLeft" data-wow-delay=".5s">Who are you?</h2>
-		<h3 class="animated wow fadeInRight" data-wow-delay=".5s"><a href="index.html">Home</a><label>/</label>Who are you?</h3>
+		<h2 class="animated wow fadeInLeft" data-wow-delay=".5s">Login</h2>
+		<h3 class="animated wow fadeInRight" data-wow-delay=".5s"><a href="index.html">Home</a><label>/</label>Who are you?<label>/</label>Customer</h3>
 		<div class="clearfix"> </div>
 	</div>
 </div>
 <!-- contact -->
-  <br><br>
-	<div class="col-sm-4">
+	<div class="login">
 		<div class="container">
+		<form method="post" action="clogin.php">
 			<div class="col-md-6 login-do1 animated wow fadeInLeft" data-wow-delay=".5s">
-            <a href="alogin.html" ><button type="button" class="btn btn-lg btn-primary" style="margin:30px">Affiliated Company</button></a>
-            <a href="clogin.html" ><button type="button" href="clogin.html" class="btn btn-lg btn-success" >Customer</button></a>
-      </div>
+				<div class="login-mail">
+					<input type="text" name="username" placeholder="Username" required="">
+					<i class="glyphicon glyphicon-envelope"></i>
+				</div>
+				<div class="login-mail">
+					<input type="password" name="password" placeholder="Password" required="">
+					<i class="glyphicon glyphicon-lock"></i>
+				</div>
+			</div>
+
+			<div class="col-md-6 login-do animated wow fadeInRight" data-wow-delay=".5s">
+				<label class="hvr-sweep-to-top login-sub">
+					<input type="submit" name="submit" value="login">
+					</label>
+					<p>Do not have an account?</p>
+				<a href="register.html" class="hvr-sweep-to-top">Signup</a>
+			</div>
+
 			<div class="clearfix"> </div>
+		</form>
+
 	</div>
 	</div>
-  <br><br><br><br>
+
+
 <div class="social animated wow fadeInUp" data-wow-delay=".1s">
 	<div class="container">
 		<div class="col-sm-3 social-ic">
@@ -253,8 +272,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 footer-grid animated wow fadeInLeft" data-wow-delay=".6s">
 					<h3>Contact Info</h3>
 					<ul>
-						<li><i class="glyphicon glyphicon-map-marker" ></i>204, Rodriguez Villa, Kamani, Kurla(W) <span>Mumbai.</span></li>
-						<li class="foot-mid"><i class="glyphicon glyphicon-envelope" ></i><a href="mailto:info@example.com">perkjet143@gmail.com</a></li>
+						<li><i class="glyphicon glyphicon-map-marker" ></i>1234k Avenue, 4th block, <span>New York City.</span></li>
+						<li class="foot-mid"><i class="glyphicon glyphicon-envelope" ></i><a href="mailto:info@example.com">info@example.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" ></i>+1234 567 567</li>
 					</ul>
 				</div>
@@ -271,11 +290,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 
 			<div class="copy-right animated wow fadeInUp" data-wow-delay=".5s">
-<<<<<<< HEAD
-				<p>&copy 7X. All rights reserved | Design by <a href="#">Team Angaar</a></p>
-=======
-				<p>&copy All rights reserved | Design by <a href="#">Team Srijan</a></p>
->>>>>>> 939d07ded1d973b14417f998e358c6372ddd73cc
+				<p>&copy 2016 Classic Style. All rights reserved | Design by <a href="http://w3layouts.com/">Team Srijan</a></p>
 			</div>
 		</div>
 	</div>
