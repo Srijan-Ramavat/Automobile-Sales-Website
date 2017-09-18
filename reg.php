@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php if(isset($_GET['error'])){echo $_GET['error'];echo "<br>";} ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -96,7 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<li><a href="products.html">Rolls Royce </a></li>
 												<li><a href="products.html">BMW </a></li>
 												<li><a href="products.html">Jaguar </a></li>
-                                                <li><a href="products.html">Mercedes-Benz </a></li>
+                        <li><a href="products.html">Mercedes-Benz </a></li>
 												<li><a href="products.html">Audi </a></li>
 
 											</ul>
@@ -191,27 +192,53 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		</div>
 	</div>
-<!-- //header -->
-<!--banner-->
+<!-- //header --><!--banner-->
 <div class="banner-top">
 	<div class="container">
-		<h2 class="animated wow fadeInLeft" data-wow-delay=".5s">Who are you?</h2>
-		<h3 class="animated wow fadeInRight" data-wow-delay=".5s"><a href="index.html">Home</a><label>/</label>Who are you?</h3>
+		<h2 class="animated wow fadeInLeft" data-wow-delay=".5s">Register</h2>
+		<h3 class="animated wow fadeInRight" data-wow-delay=".5s"><a href="index.html">Home</a><label>/</label>Register</h3>
 		<div class="clearfix"> </div>
 	</div>
 </div>
 <!-- contact -->
-  <br><br>
-	<div class="col-sm-4">
+	<div class="login">
 		<div class="container">
+		<form method="post" action="register.php">
 			<div class="col-md-6 login-do1 animated wow fadeInLeft" data-wow-delay=".5s">
-            <a href="alogin.html" ><button type="button" class="btn btn-lg btn-primary" style="margin:30px">Affiliated Company</button></a>
-            <a href="clogin.html" ><button type="button" href="clogin.html" class="btn btn-lg btn-success" >Customer</button></a>
-      </div>
+				<div class="login-mail">
+					<input type="text" placeholder="Username" name="username" required="">
+					<i class="glyphicon glyphicon-envelope"></i>
+				</div>
+				<div class="login-mail">
+					<input type="text" placeholder="Email" name="email" required="">
+					<i class="glyphicon glyphicon-envelope"></i>
+				</div>
+				<div class="login-mail">
+					<input type="password" placeholder="Password" name="password" required="">
+					<i class="glyphicon glyphicon-lock"></i>
+				</div>
+				<div class="login-mail">
+					<input type="text" pattern="[7-9]{1}[0-9]{9}" placeholder="Contact no." name="phone" required="">
+					<i class="glyphicon glyphicon-earphone"></i>
+				</div>
+				  <a class="news-letter" href="#">
+						 <label class="checkbox1"><input type="checkbox" name="checkbox" ><i> </i>I agree with the terms</label>
+					   </a>
+
+			</div>
+			<div class="col-md-6 login-do animated wow fadeInRight" data-wow-delay=".5s">
+				<label class="hvr-sweep-to-top login-sub">
+					<input type="submit" value="Submit">
+					</label>
+					<p>Already register</p>
+				<a href="login.html" class="hvr-sweep-to-top">Login</a>
+			</div>
 			<div class="clearfix"> </div>
+			</form>
+		</div>
+
+
 	</div>
-	</div>
-  <br><br><br><br>
 <div class="social animated wow fadeInUp" data-wow-delay=".1s">
 	<div class="container">
 		<div class="col-sm-3 social-ic">
@@ -271,7 +298,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 
 			<div class="copy-right animated wow fadeInUp" data-wow-delay=".5s">
-				<p>&copy All rights reserved | Design by <a href="#">Team Srijan</a></p>
+				<p>&copy 2016 Classic Style. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 			</div>
 		</div>
 	</div>
