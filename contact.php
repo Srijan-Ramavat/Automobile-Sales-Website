@@ -1,3 +1,20 @@
+<?php
+
+session_start();
+
+if($_SESSION['login_user'])
+{
+	$username=$_SESSION['login_user'];
+}
+if(isset($_GET['error']))
+{
+	echo "<div class='alert alert-danger' role='alert'><strong>".$_GET['error']."</strong> Change a few things up and try submitting again.</div>";
+}
+if(isset($_GET['success']))
+{
+  echo "<div class='alert alert-success' role='alert'><strong>".$_GET['success']."</strong> Details Submitted.</div>";
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,6 +47,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //animation-effect -->
 <link href='//fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
@@ -48,9 +66,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="header-right animated wow fadeInRight" data-wow-delay=".5s">
 				<div class="header-right1 ">
 					<ul>
-
-						<li><i class="glyphicon glyphicon-log-in" ></i><a href="login.html">Login</a></li>
-						<li><i class="glyphicon glyphicon-book" ></i><a href="register.html">Register</a></li>
+                        <li><a href="#"><?php echo $username; ?></a></li>
+						<li><i class="glyphicon glyphicon-log-out" ></i><a href="logout.php">Logout</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
@@ -71,13 +88,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<span class="icon-bar"></span>
 						</button>
 						 <div class="navbar-brand logo-nav-left ">
-							<h1 class="animated wow pulse" data-wow-delay=".5s"><a href="index.html">Perk<span>Jet</span></a></h1>
+							<h1 class="animated wow pulse" data-wow-delay=".5s"><a href="index.php">Perk<span>Jet</span></a></h1>
 						</div>
 
 					</div>
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html" class="act">Home</a></li>
+							<li class="active"><a href="index.php" class="act">Home</a></li>
 							<!-- Mega Menu -->
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">4 Wheelers <b class="caret"></b></a>
@@ -87,32 +104,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<ul class="multi-column-dropdown">
 												<h6>Companies</h6>
 
-												<li><a href="products.html">Rolls Royce </a></li>
-												<li><a href="products.html">BMW </a></li>
-												<li><a href="products.html">Jaguar </a></li>
-                        <li><a href="products.html">Mercedes-Benz </a></li>
-												<li><a href="products.html">Audi </a></li>
+												<li><a href="products.php">Rolls Royce </a></li>
+												<li><a href="products.php">BMW </a></li>
+												<li><a href="products.php">Jaguar </a></li>
+                        <li><a href="products.php">Mercedes-Benz </a></li>
+												<li><a href="products.php">Audi </a></li>
 
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Types</h6>
-												<li><a href="products.html">Hatchback</a></li>
-												<li><a href="products.html">Sedans</a></li>
-												<li><a href="products.html">MUV</a></li>
-												<li><a href="products.html">Convertible</a></li>
-												<li><a href="products.html">Hybrid</a></li>
-												<li><a href="products.html">Coupe</a></li>
+												<li><a href="products.php">Hatchback</a></li>
+												<li><a href="products.php">Sedans</a></li>
+												<li><a href="products.php">MUV</a></li>
+												<li><a href="products.php">Convertible</a></li>
+												<li><a href="products.php">Hybrid</a></li>
+												<li><a href="products.php">Coupe</a></li>
 
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Price Range</h6>
-												<li><a href="products.html">20 lakhs - 50 lakhs</a></li>
-												<li><a href="products.html">50 lakhs - 1 Cr</a></li>
-												<li><a href="products.html">Above 1 Cr</a></li>
+												<li><a href="products.php">20 lakhs - 50 lakhs</a></li>
+												<li><a href="products.php">50 lakhs - 1 Cr</a></li>
+												<li><a href="products.php">Above 1 Cr</a></li>
 
 											</ul>
 										</div>
@@ -120,10 +137,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div class="row-top">
 										<div class="col-sm-6 row1">
-											<a href="products.html"><img src="images/me.jpg" alt="" class="img-responsive"></a>
+											<a href="products.php"><img src="images/me.jpg" alt="" class="img-responsive"></a>
 										</div>
 										<div class=" col-sm-6 row2">
-											<a href="products.html"><img src="images/me1.jpg" alt="" class="img-responsive"></a>
+											<a href="products.php"><img src="images/me1.jpg" alt="" class="img-responsive"></a>
 										</div>
 										<div class="clearfix"></div>
 									</div>
@@ -137,29 +154,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<ul class="multi-column-dropdown">
 												<h6>Companies</h6>
 
-												<li><a href="products1.html">Herley Davidson </a></li>
-												<li><a href="products1.html">Royal Enfield </a></li>
-												<li><a href="products1.html">Honda </a></li>
-												<li><a href="products1.html">Kawasaki </a></li>
+												<li><a href="products1.php">Herley Davidson </a></li>
+												<li><a href="products1.php">Royal Enfield </a></li>
+												<li><a href="products1.php">Honda </a></li>
+												<li><a href="products1.php">Kawasaki </a></li>
 
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Types</h6>
-												<li><a href="products1.html">Street</a></li>
-												<li><a href="products1.html">Mountain</a></li>
-												<li><a href="products1.html">Hybrid</a></li>
-												<li><a href="products1.html">BMX</a></li>
+												<li><a href="products1.php">Street</a></li>
+												<li><a href="products1.php">Mountain</a></li>
+												<li><a href="products1.php">Hybrid</a></li>
+												<li><a href="products1.php">BMX</a></li>
 
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Price</h6>
-												<li><a href="products1.html">40 Thousand - 1 Lakhs</a></li>
-												<li><a href="products1.html">1 lakhs - 5 lakhs</a></li>
-												<li><a href="products1.html">5 lakhs and Above</a></li>
+												<li><a href="products1.php">40 Thousand - 1 Lakhs</a></li>
+												<li><a href="products1.php">1 lakhs - 5 lakhs</a></li>
+												<li><a href="products1.php">5 lakhs and Above</a></li>
 
 											</ul>
 										</div>
@@ -167,17 +184,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div class="row-top">
 										<div class="col-sm-6 row1">
-											<a href="products1.html"><img src="images/me2.jpg" alt="" class="img-responsive"></a>
+											<a href="products1.php"><img src="images/me2.jpg" alt="" class="img-responsive"></a>
 										</div>
 										<div class=" col-sm-6 row2">
-											<a href="products1.html"><img src="images/me3.jpg" alt="" class="img-responsive"></a>
+											<a href="products1.php"><img src="images/me3.jpg" alt="" class="img-responsive"></a>
 										</div>
 										<div class="clearfix"></div>
 									</div>
 								</ul>
 							</li>
 
-							<li><a href="contact.html">Contact Us</a></li>
+							<li><a href="contact.php">Contact Us</a></li>
 						</ul>
 					</div>
 					</nav>
@@ -190,7 +207,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="banner-top">
 	<div class="container">
 		<h2 class="animated wow fadeInLeft" data-wow-delay=".5s">Contact</h2>
-		<h3 class="animated wow fadeInRight" data-wow-delay=".5s"><a href="index.html">Home</a><label>/</label>Contact</h3>
+		<h3 class="animated wow fadeInRight" data-wow-delay=".5s"><a href="index.php">Home</a><label>/</label>Contact</h3>
 		<div class="clearfix"> </div>
 	</div>
 </div>
@@ -198,32 +215,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="contact">
 		<div class="container">
 
-
 			<div class="col-md-8 contact-grids1 animated wow fadeInRight" data-wow-delay=".5s">
-				<form>
+				<form method="post" action="cont.php">
 						<div class="contact-form2">
 							<h4>Name</h4>
 
-								<input type="text" placeholder="" required="">
+								<input type="text" name="name" placeholder="" required="">
 
 						</div>
-						<div class="contact-form2">
-							<h4>Website</h4>
-
-								<input type="text" placeholder="" required="">
-
-						</div>
-
 						<div class="contact-form2">
 							<h4>Email</h4>
 
-								<input type="email" placeholder="" required="">
+								<input type="email" name="email" placeholder="" required="">
 
 						</div>
 						<div class="contact-form2">
 							<h4>Subject</h4>
 
-								<input type="text" placeholder="" required="">
+								<input type="text" name="subject" placeholder="" required="">
 
 						</div>
 
@@ -231,9 +240,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="contact-me ">
 					<h4>Message</h4>
 
-						<textarea type="text"  placeholder="" required=""> </textarea>
+						<textarea type="text" name="message" placeholder="" required=""> </textarea>
 						</div>
-						<input type="submit" value="Submit" >
+						<input type="submit" name="submit" value="Submit" >
 				</form>
 
 			</div>
@@ -308,7 +317,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						non proident Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
 		</div>
 		<div class="col-md-3 footer-top2">
-		<a href="contact.html">Contact Us</a>
+		<a href="contact.php">Contact Us</a>
 		</div>
 		<div class="clearfix"> </div>
 		</div>

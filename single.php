@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+if($_SESSION['login_user'])
+{
+	$username=$_SESSION['login_user'];
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,8 +59,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="header-right1 ">
 					<ul>
 
-						<li><i class="glyphicon glyphicon-log-in" ></i><a href="login.html">Login</a></li>
-						<li><i class="glyphicon glyphicon-book" ></i><a href="register.html">Register</a></li>
+						<li><?php echo $username; ?></li>
+						<li><i class="glyphicon glyphicon-logout" ></i><a href="logout.php">Logout</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
@@ -71,13 +81,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<span class="icon-bar"></span>
 						</button>
 						 <div class="navbar-brand logo-nav-left ">
-							<h1 class="animated wow pulse" data-wow-delay=".5s"><a href="index.html">Perk<span>Jet</span></a></h1>
+							<h1 class="animated wow pulse" data-wow-delay=".5s"><a href="index.php">Perk<span>Jet</span></a></h1>
 						</div>
 
 					</div>
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html" class="act">Home</a></li>
+							<li class="active"><a href="index.php" class="act">Home</a></li>
 							<!-- Mega Menu -->
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">4 Wheelers <b class="caret"></b></a>
@@ -87,32 +97,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<ul class="multi-column-dropdown">
 												<h6>Companies</h6>
 
-												<li><a href="products.html">Rolls Royce </a></li>
-												<li><a href="products.html">BMW </a></li>
-												<li><a href="products.html">Jaguar </a></li>
-                        <li><a href="products.html">Mercedes-Benz </a></li>
-												<li><a href="products.html">Audi </a></li>
+												<li><a href="products.php">Rolls Royce </a></li>
+												<li><a href="products.php">BMW </a></li>
+												<li><a href="products.php">Jaguar </a></li>
+                        <li><a href="products.php">Mercedes-Benz </a></li>
+												<li><a href="products.php">Audi </a></li>
 
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Types</h6>
-												<li><a href="products.html">Hatchback</a></li>
-												<li><a href="products.html">Sedans</a></li>
-												<li><a href="products.html">MUV</a></li>
-												<li><a href="products.html">Convertible</a></li>
-												<li><a href="products.html">Hybrid</a></li>
-												<li><a href="products.html">Coupe</a></li>
+												<li><a href="products.php">Hatchback</a></li>
+												<li><a href="products.php">Sedans</a></li>
+												<li><a href="products.php">MUV</a></li>
+												<li><a href="products.php">Convertible</a></li>
+												<li><a href="products.php">Hybrid</a></li>
+												<li><a href="products.php">Coupe</a></li>
 
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Price Range</h6>
-												<li><a href="products.html">20 lakhs - 50 lakhs</a></li>
-												<li><a href="products.html">50 lakhs - 1 Cr</a></li>
-												<li><a href="products.html">Above 1 Cr</a></li>
+												<li><a href="products.php">20 lakhs - 50 lakhs</a></li>
+												<li><a href="products.php">50 lakhs - 1 Cr</a></li>
+												<li><a href="products.php">Above 1 Cr</a></li>
 
 											</ul>
 										</div>
@@ -120,10 +130,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div class="row-top">
 										<div class="col-sm-6 row1">
-											<a href="products.html"><img src="images/me.jpg" alt="" class="img-responsive"></a>
+											<a href="products.php"><img src="images/me.jpg" alt="" class="img-responsive"></a>
 										</div>
 										<div class=" col-sm-6 row2">
-											<a href="products.html"><img src="images/me1.jpg" alt="" class="img-responsive"></a>
+											<a href="products.php"><img src="images/me1.jpg" alt="" class="img-responsive"></a>
 										</div>
 										<div class="clearfix"></div>
 									</div>
@@ -137,29 +147,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<ul class="multi-column-dropdown">
 												<h6>Companies</h6>
 
-												<li><a href="products1.html">Herley Davidson </a></li>
-												<li><a href="products1.html">Royal Enfield </a></li>
-												<li><a href="products1.html">Honda </a></li>
-												<li><a href="products1.html">Kawasaki </a></li>
+												<li><a href="products1.php">Herley Davidson </a></li>
+												<li><a href="products1.php">Royal Enfield </a></li>
+												<li><a href="products1.php">Honda </a></li>
+												<li><a href="products1.php">Kawasaki </a></li>
 
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Types</h6>
-												<li><a href="products1.html">Street</a></li>
-												<li><a href="products1.html">Mountain</a></li>
-												<li><a href="products1.html">Hybrid</a></li>
-												<li><a href="products1.html">BMX</a></li>
+												<li><a href="products1.php">Street</a></li>
+												<li><a href="products1.php">Mountain</a></li>
+												<li><a href="products1.php">Hybrid</a></li>
+												<li><a href="products1.php">BMX</a></li>
 
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Price</h6>
-												<li><a href="products1.html">40 Thousand - 1 Lakhs</a></li>
-												<li><a href="products1.html">1 lakhs - 5 lakhs</a></li>
-												<li><a href="products1.html">5 lakhs and Above</a></li>
+												<li><a href="products1.php">40 Thousand - 1 Lakhs</a></li>
+												<li><a href="products1.php">1 lakhs - 5 lakhs</a></li>
+												<li><a href="products1.php">5 lakhs and Above</a></li>
 
 											</ul>
 										</div>
@@ -167,10 +177,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</div>
 									<div class="row-top">
 										<div class="col-sm-6 row1">
-											<a href="products1.html"><img src="images/me2.jpg" alt="" class="img-responsive"></a>
+											<a href="products1.php"><img src="images/me2.jpg" alt="" class="img-responsive"></a>
 										</div>
 										<div class=" col-sm-6 row2">
-											<a href="products1.html"><img src="images/me3.jpg" alt="" class="img-responsive"></a>
+											<a href="products1.php"><img src="images/me3.jpg" alt="" class="img-responsive"></a>
 										</div>
 										<div class="clearfix"></div>
 									</div>
@@ -190,7 +200,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="banner-top">
 	<div class="container">
 		<h2 class="animated wow fadeInLeft" data-wow-delay=".5s">Single</h2>
-		<h3 class="animated wow fadeInRight" data-wow-delay=".5s"><a href="index.html">Home</a><label>/</label>Single</h3>
+		<h3 class="animated wow fadeInRight" data-wow-delay=".5s"><a href="index.php">Home</a><label>/</label>Single</h3>
 		<div class="clearfix"> </div>
 	</div>
 </div>
@@ -202,25 +212,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="categories animated wow fadeInUp animated" data-wow-delay=".5s" >
 				<h3>Categories</h3>
 				<ul class="cate">
-					<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.html">Best Selling</a> <span>(15)</span></li>
-					<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.html">2-Wheeler</a> <span>(16)</span></li>
+					<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.php">Best Selling</a> <span>(15)</span></li>
+					<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.php">2-Wheeler</a> <span>(16)</span></li>
 						<ul>
-							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.html">Accessories</a> <span>(2)</span></li>
-							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.html">Street</a> <span>(5)</span></li>
-							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.html">Mountain</a> <span>(1)</span></li>
-							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.html">Hybrid</a> <span>(0)</span></li>
-							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.html">BMX</a> <span>(1)</span></li>
+							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.php">Accessories</a> <span>(2)</span></li>
+							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.php">Street</a> <span>(5)</span></li>
+							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.php">Mountain</a> <span>(1)</span></li>
+							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.php">Hybrid</a> <span>(0)</span></li>
+							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.php">BMX</a> <span>(1)</span></li>
 						</ul>
-					<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.html">Sales</a> <span>(15)</span></li>
-					<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.html">4-Wheeler</a> <span>(15)</span></li>
+					<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products1.php">Sales</a> <span>(15)</span></li>
+					<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.php">4-Wheeler</a> <span>(15)</span></li>
 						<ul>
-							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.html">Accessories</a> <span>(2)</span></li>
-							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.html">Hatchbacks</a> <span>(0)</span></li>
-							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.html">Sedan</a> <span>(1)</span></li>
-							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.html">MUV</a> <span>(0)</span></li>
-							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.html">Convertible</a> <span>(4)</span></li>
-							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.html">Hybrid</a> <span>(2)</span></li>
-							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.html">Coupe</a> <span>(10)</span></li>
+							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.php">Accessories</a> <span>(2)</span></li>
+							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.php">Hatchbacks</a> <span>(0)</span></li>
+							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.php">Sedan</a> <span>(1)</span></li>
+							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.php">MUV</a> <span>(0)</span></li>
+							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.php">Convertible</a> <span>(4)</span></li>
+							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.php">Hybrid</a> <span>(2)</span></li>
+							<li><i class="glyphicon glyphicon-menu-right" ></i><a href="products.php">Coupe</a> <span>(10)</span></li>
 						</ul>
 				</ul>
 			</div>
@@ -231,11 +241,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="product-head">
 					<div class="product-go">
 						<div class=" fashion-grid">
-									<a href="single.html"><img class="img-responsive " src="images/gmc1.jpeg" alt=""></a>
+									<a href="single.php"><img class="img-responsive " src="images/gmc1.jpeg" alt=""></a>
 
 								</div>
 							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="single.html">Sierra Dinali </a></h6>
+								<h6 class="best2"><a href="single.php">Sierra Dinali </a></h6>
 								<span class=" price-in1"> <del>$50.00</del>$40.00</span>
 								<p>The standard chunk of Lorem Ipsum used</p>
 							</div>
@@ -244,11 +254,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="product-go">
 						<div class=" fashion-grid">
-									<a href="single.html"><img class="img-responsive " src="images/gixer.jpg" alt=""></a>
+									<a href="single.php"><img class="img-responsive " src="images/gixer.jpg" alt=""></a>
 
 								</div>
 							<div class=" fashion-grid1">
-								<h6 class="best2"><a href="single.html">Gixxer SF</a></h6>
+								<h6 class="best2"><a href="single.php">Gixxer SF</a></h6>
 								<span class=" price-in1"> <del>$50.00</del>$40.00</span>
 								<p>The standard chunk of Lorem Ipsum used</p>
 							</div>
@@ -281,7 +291,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<p class="in-para"> There are many variations of passages of Harley Davidson.</p>
 			    <div class="price_single">
 				  <span class="reducedfrom item_price">$69,999.00</span>
-				 <a href="clogin.html" data-text="Check it!" class="but-hover1 item_add">Buy Now!</a>
+				 <a href="purchase.php" data-text="Check it!" class="but-hover1 item_add">Buy Now!</a>
 				 <div class="clearfix"></div>
 				</div>
 
@@ -336,7 +346,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<p>Angaaaar!</p>
 				</div>
 				<div class="clearfix"> </div>
-				<a class="add-re" href="single.html">Add Review</a>
+				<a class="add-re" href="single.php">Add Review</a>
 			</div>
 
 
@@ -364,7 +374,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="grid-pro">
 								<div  class=" grid-product " >
 									<figure>
-										<a href="single.html">
+										<a href="single.php">
 											<div class="grid-img">
 												<img  src="images/bi1.jpg" width="350px" height="100px" alt="">
 											</div>
@@ -376,7 +386,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="women">
 									<a href="#"><img src="images/ll.png" alt=""></a>
-									<h6><a href="single.html">Agera R</a></h6>
+									<h6><a href="single.php">Agera R</a></h6>
 									<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
 									<a href="#" data-text="Check it!" class="but-hover1 item_add">Buy Now!</a>
 								</div>
@@ -387,7 +397,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="grid-pro">
 								<div  class=" grid-product " >
 									<figure>
-										<a href="single.html">
+										<a href="single.php">
 											<div class="grid-img">
 												<img  src="images/tes1.jpg" width="350px" height="100px" alt="">
 											</div>
@@ -399,7 +409,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="women">
 									<a href="#"><img src="images/ll.png" alt=""></a>
-									<h6><a href="single.html">Model S</a></h6>
+									<h6><a href="single.php">Model S</a></h6>
 									<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
 									<a href="#" data-text="Check it!" class="but-hover1 item_add">Buy Now!</a>
 								</div>
@@ -409,7 +419,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="grid-pro">
 								<div  class=" grid-product " >
 									<figure>
-										<a href="single.html">
+										<a href="single.php">
 											<div class="grid-img">
 												<img  src="images/mer1.png" width="350px" height="100px" alt="">
 											</div>
@@ -421,7 +431,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="women">
 									<a href="#"><img src="images/ll.png" alt=""></a>
-									<h6><a href="single.html">AMG GT Coupe</a></h6>
+									<h6><a href="single.php">AMG GT Coupe</a></h6>
 									<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
 									<a href="#" data-text="Check it!" class="but-hover1 item_add">Buy Now!</a>
 								</div>
@@ -512,7 +522,6 @@ $(window).load(function() {
   });
 });
 </script>
-
 
 </body>
 </html>

@@ -1,3 +1,10 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<?php if(isset($_GET['error'])){echo "<div class='alert alert-danger' role='alert'><strong>".$_GET['error']."</strong> Change a few things up and try submitting again.</div>";} ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -189,97 +196,44 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--banner-->
 <div class="banner-top">
 	<div class="container">
-		<h2 class="animated wow fadeInLeft" data-wow-delay=".5s">Contact</h2>
-		<h3 class="animated wow fadeInRight" data-wow-delay=".5s"><a href="index.html">Home</a><label>/</label>Contact</h3>
+		<h2 class="animated wow fadeInLeft" data-wow-delay=".5s">Login</h2>
+		<h3 class="animated wow fadeInRight" data-wow-delay=".5s"><a href="index.html">Home</a><label>/</label>Who are you?<label>/</label>Affiliated Company</h3>
 		<div class="clearfix"> </div>
 	</div>
 </div>
 <!-- contact -->
-	<div class="contact">
+	<div class="login">
 		<div class="container">
+		<form method="post" action="alogin.php">
+			<div class="col-md-6 login-do1 animated wow fadeInLeft" data-wow-delay=".5s">
+				<div class="login-mail">
+					<input type="text" name="username" placeholder="Username" required="">
+					<i class="glyphicon glyphicon-envelope"></i>
+				</div>
+				<div class="login-mail">
+					<input type="password" name="password" placeholder="Password" required="">
+					<i class="glyphicon glyphicon-lock"></i>
+				</div>
+				   <a class="news-letter " href="#">
+						 <label class="checkbox1"><input type="checkbox" name="checkbox" ><i> </i>Forgot Password</label>
+					   </a>
 
 
-			<div class="col-md-8 contact-grids1 animated wow fadeInRight" data-wow-delay=".5s">
-				<form>
-						<div class="contact-form2">
-							<h4>Name</h4>
-
-								<input type="text" placeholder="" required="">
-
-						</div>
-						<div class="contact-form2">
-							<h4>Website</h4>
-
-								<input type="text" placeholder="" required="">
-
-						</div>
-
-						<div class="contact-form2">
-							<h4>Email</h4>
-
-								<input type="email" placeholder="" required="">
-
-						</div>
-						<div class="contact-form2">
-							<h4>Subject</h4>
-
-								<input type="text" placeholder="" required="">
-
-						</div>
-
-
-				<div class="contact-me ">
-					<h4>Message</h4>
-
-						<textarea type="text"  placeholder="" required=""> </textarea>
-						</div>
-						<input type="submit" value="Submit" >
-				</form>
+			</div>
+			<div class="col-md-6 login-do animated wow fadeInRight" data-wow-delay=".5s">
+				<label class="hvr-sweep-to-top login-sub">
+					<input type="submit" value="login">
+					</label>
 
 			</div>
 
-			<div class="col-md-4 contact-grids">
-				<div class=" contact-grid animated wow fadeInLeft" data-wow-delay=".5s">
-					<div class="contact-grid1">
-						<div class="contact-grid2 ">
-							<i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
-						</div>
-						<div class="contact-grid3">
-							<h4>Address</h4>
-							<p>204 Rodriguez Villa, Kamani, Kurla (W) <span>Mumbai.</span></p>
-						</div>
-					</div>
-				</div>
-				<div class=" contact-grid animated wow fadeInUp" data-wow-delay=".5s">
-					<div class="contact-grid1">
-						<div class="contact-grid2 contact-grid4">
-							<i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>
-						</div>
-						<div class="contact-grid3">
-							<h4>Call Us</h4>
-							<p>+1234 758 839<span>+1273 748 730</span></p>
-						</div>
-					</div>
-				</div>
-				<div class=" contact-grid animated wow fadeInRight" data-wow-delay=".5s">
-					<div class="contact-grid1">
-						<div class="contact-grid2 contact-grid5">
-							<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
-						</div>
-						<div class="contact-grid3">
-							<h4>Email</h4>
-							<p><a href="contactto:info@example.com">perkjet143@gmail.com</a></p>
-						</div>
-					</div>
-				</div>
+			<div class="clearfix"> </div>
+			</form>
 
-			</div>
-		</div>
 	</div>
-	<div class="map">
-		<iframe class="animated wow fadeInLeft" data-wow-delay=".5s" src="https://www.google.com/maps/d/embed?mid=1oEUvtsdtUxhAELbP_ZJ5FycH-j0&hl=en_US" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div >
-<!-- //contact -->
+	</div>
+
+
 <div class="social animated wow fadeInUp" data-wow-delay=".1s">
 	<div class="container">
 		<div class="col-sm-3 social-ic">

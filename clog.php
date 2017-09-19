@@ -1,10 +1,9 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<?php if(isset($_GET['error'])){echo $_GET['error'];echo "<br>";} ?>
+<?php
+ if(isset($_GET['error']))
+ {
+	 echo "<div class='alert alert-danger' role='alert'><strong>".$_GET['error']."</strong> Change a few things up and try submitting again.</div>";
+ }
+?>
 <!DOCTYPE html>
 <html>
 <head>
