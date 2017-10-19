@@ -87,15 +87,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span class="icon-bar"></span>
 					</button>
 					 <div class="navbar-brand logo-nav-left ">
-						<h1 class="animated wow pulse" data-wow-delay=".5s"><a href="tata.php">Perk<span>Jet</span></a></h1>
+						<h1 class="animated wow pulse" data-wow-delay=".5s"><a href="master.php">Perk<span>Jet</span></a></h1>
 					</div>
 
 				</div>
 				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="tata.php" class="act">Home</a></li>
+						<li class="active"><a href="master.php" class="act">Home</a></li>
 						<!-- Mega Menu -->
-												<li><a href="contact.html">Contact Us</a></li>
+												<li><a href="Contact.php">Contact Us</a></li>
 					</ul>
 				</div>
 				</nav>
@@ -213,7 +213,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						non proident Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
 		</div>
 		<div class="col-md-3 footer-top2">
-		<a href="contact.html">Contact Us</a>
+		<a href="Contact.php">Contact Us</a>
 		</div>
 		<div class="clearfix"> </div>
 		</div>

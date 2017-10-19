@@ -53,7 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</ul>
 				</div>
 				<div class="header-right animated wow fadeInRight" data-wow-delay=".5s">
-				
+
 				<div class="clearfix"> </div>
 				</div>
 				<div class="clearfix"> </div>
@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 
 					</div>
-					
+
 				</div>
 
 		</div>
@@ -86,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="banner-top" style="background-image: url(images/admin.jpg) no-repeat center;">
 	<div class="container">
 		<h2 class="animated wow fadeInLeft" data-wow-delay=".5s">Administration Login</h2>
-		<h3 class="animated wow fadeInRight" data-wow-delay=".5s"><a href="admin.html">Admin's Arena</a>
+		<h3 class="animated wow fadeInRight" data-wow-delay=".5s"><a href="amin.php">Admin's Arena</a>
 		<div class="clearfix"> </div>
 	</div>
 </div>
